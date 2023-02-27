@@ -1,0 +1,9 @@
+anotações sobre o DOM
+eventos:são tudo aquilo que pode acontecer com os elementos
+o mais comum são com eventos de mouse.alguns exemplos.
+>mouseenter
+>mousemove
+>mousedown
+>mouseup
+>click
+>mouseout
