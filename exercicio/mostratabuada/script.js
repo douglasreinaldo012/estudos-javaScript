@@ -1,4 +1,4 @@
-function tabuada(){
+function multiplica(){
    let num = document.querySelector("input#txtnumero")
    let tab = document.querySelector("select#seltab")
    
@@ -16,3 +16,59 @@ function tabuada(){
     }
    }
 }
+function somar(){
+    let num = document.querySelector("input#txtnumero")
+    let tab = document.querySelector("select#seltab")
+    
+    if(num.value.length == 0){ 
+     window.alert("Digite um número")
+    }else{
+     let numcon = Number(num.value)
+     c = 1
+     tab.innerHTML=' '
+     while(c<=10){
+         let item = document.createElement('option')
+         item.text =`${numcon}+${c}=${numcon+c}      `
+         tab.appendChild(item)
+         c++
+     }
+    }
+ }
+ function subtrair(){
+    let num = document.querySelector("input#txtnumero")
+    let tab = document.querySelector("select#seltab")
+    
+    if(num.value.length == 0){ 
+     window.alert("Digite um número")
+    }else{
+     let numcon = Number(num.value)
+     c = 1
+     let aux = numcon+1
+     tab.innerHTML=' '
+     while(c<=10){
+         let item = document.createElement('option')
+         item.text =`${aux}-${numcon}=${aux-numcon}      `
+         tab.appendChild(item)
+         c++
+         aux++
+     }
+    }
+ }
+ function dividir(){
+    let num = document.querySelector("input#txtnumero")
+    let tab = document.querySelector("select#seltab")
+    
+    if(num.value.length == 0){ 
+     window.alert("Digite um número")
+    }else{
+     let numcon = Number(num.value)
+     c = 1
+     tab.innerHTML=' '
+     while(c<=10){
+         let item = document.createElement('option')
+         item.text =`${numcon}/${c}=${numcon/c}      `
+         tab.appendChild(item)
+         c++
+     }
+    }
+ }
