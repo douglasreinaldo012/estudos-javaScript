@@ -11,6 +11,7 @@ function multiplica(){
     while(c<=10){
         let item = document.createElement('option')
         item.text =`${numcon}X${c}=${numcon*c}      `
+        item.value=`tab${c}`
         tab.appendChild(item)
         c++
     }
@@ -29,6 +30,7 @@ function somar(){
      while(c<=10){
          let item = document.createElement('option')
          item.text =`${numcon}+${c}=${numcon+c}      `
+         item.value=`tab${c}`
          tab.appendChild(item)
          c++
      }
@@ -48,6 +50,7 @@ function somar(){
      while(c<=10){
          let item = document.createElement('option')
          item.text =`${aux}-${numcon}=${aux-numcon}      `
+         item.value=`tab${c}`
          tab.appendChild(item)
          c++
          aux++
@@ -62,13 +65,16 @@ function somar(){
      window.alert("Digite um número")
     }else{
      let numcon = Number(num.value)
+     let aux = numcon
      c = 1
      tab.innerHTML=' '
      while(c<=10){
          let item = document.createElement('option')
-         item.text =`${numcon}/${c}=${numcon/c}      `
+         item.text =`${aux}/${numcon}=${aux/numcon}`
+         item.value=`tab${c}`
          tab.appendChild(item)
          c++
+         aux = aux + numcon
      }
     }
  }
